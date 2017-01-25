@@ -1,4 +1,4 @@
-package trackmail.data.dtos;
+package trackmail.data;
 
 import org.springframework.data.annotation.Id;
 

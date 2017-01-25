@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import trackmail.data.dtos.Customer;
+import trackmail.data.Customer;
 import trackmail.services.CustomerRepository;
 import trackmail.services.MailTrackService;
 
@@ -32,11 +32,6 @@ public class MailTrackController {
     @Autowired
     private CustomerRepository repository;
     @Autowired private MailTrackService mailTrackService;
-
-
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
-
-
     public void deneme(){
         repository.deleteAll();
 
@@ -65,6 +60,7 @@ public class MailTrackController {
 
     }
 
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
     public byte[] returnImage(@PathVariable String id, Model model) throws IOException {
         //find id and track values(async)
         //return default image

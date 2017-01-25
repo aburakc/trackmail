@@ -2,7 +2,7 @@ package trackmail.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import trackmail.data.dtos.Mail;
+import trackmail.data.Mail;
 
 import java.util.Date;
 

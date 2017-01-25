@@ -3,7 +3,7 @@ package trackmail.services;
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-import trackmail.data.dtos.Customer;
+import trackmail.data.Customer;
 
 public interface CustomerRepository extends MongoRepository<Customer, String> {
 
