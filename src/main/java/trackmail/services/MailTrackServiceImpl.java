@@ -16,6 +16,7 @@ public class MailTrackServiceImpl implements MailTrackService{
 
     @Override
     public void addTrack(String id, Date currentDate) {
+        //find mail
         Mail inserted = mailTrackRepository.save(new Mail(id, currentDate));
     }
 }
